@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Adventiser</title>
+
+        <link type="text/css" rel="stylesheet" href="css/admin.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome-4.6.3/css/font-awesome.min.css">
+
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/admin.js"></script>
+	</head>
+
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <div class="top">
+                    <div class="navbar-top-links">
+                        <a href="#" class="first-item">
+                            <i class="fa fa-phone"></i>
+                            <span>00-62-658-658 - </span>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-envelope"></i>
+                            <span>Contact us today to get our support!</span>
+                        </a>
+                    </div>
+                    
+                    <div id="user-info">
+                        <p>Xin chào <span>admin</span> đã đăng nhập vào hệ thống</p>
+                        <p><a href="#">Đăng xuất</a></p>
+                    </div>
+                </div>
+
+                <div id="banner">
+                    <div id="logo"><a href="#"><img src="images/logo.png" /></a></div>
+                </div>
+
+                <div id="navbar">
+                    <ul>
+                        <li id="admin-home"><a href="#">home</a></li>
+                        <li><a href="admin.html">thành viên</a></li>
+                        <li><a href="#">chuyên ngành</a></li>
+                        <li><a href="#">bài đăng</a></li>
+                        <li><a href="Adventiser.html">quảng cáo</a></li>
+                        <li><a target="_blank" href="#">xem website</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="body">
+                <h2>Quảng cáo</h2>
+
+                <div id="main">
+                    <div>
+                        <p id="add-prd"><span class="add_button">thêm quảng cáo</span></p>
+                    </div>
+
+                    <div class="member_form">
+                        <div class="minimize">
+                            <button class="close">X</button>
+                        </div>
+                        <form action="" method="post" onsubmit="return checkValidate()" name="member_form">
+                            <table class="table_form">
+                                <tr>
+                                    <td width="30%"></td>
+                                    <td width="10%">TIÊU ĐỀ</td>
+                                    <td width="30%"><input tabindex="1" required type="text" name="txt_tilte" size="50"></td>
+                                    <td width="30%"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Mô tả</td>
+                                    <td><input tabindex="2" required type="text" name="txt_description" size="50" onchange="checkPhone(this.value)"></td>
+                                    <td><input class="note" type="text" name="err_phone"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Tên người dùng</td>
+                                    <td><input tabindex="3" required type="text" name="txt_user_id" size="50"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Nội dung</td>
+                                    <td><textarea tabindex="13" name="content" id="content" cols="38" rows="5"></textarea></td>
+                                    <td><input class="note" type="text" name="err_email"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Hình ảnh</td>
+                                    <td><input tabindex="5" required type="file" name="file_image" size="50"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Trạng thái</td>
+                                    <td>
+                                    	<input tabindex="8" checked="checked" type="radio" name="active"> Có
+                                        <input tabindex="9" type="radio" name="active"> Không
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Ngày tạo</td>
+                                    <td><input tabindex="7" required type="date" name="create_date" size="50" onkeyup="checkPass()"></td>
+                                    <td><input class="note" type="text" name="err_pass"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Vị trí</td>
+                                    <td>
+                                        <select>
+                                        	<option>Content</option>
+                                            <option>Footer</option>
+                                            <option>Header</option>
+                                        </select>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <input tabindex="14" type="submit" name="sumit_member_form" value="Thêm Mới">
+                                        <input tabindex="15" type="reset" value="Làm Lại">
+                                    </td>
+                                </tr>
+                               	
+                            </table>
+                        </form>
+                    </div>
+
+                    <table class="list" border="1" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr class="title">
+                                <td width="2%">id</td>
+                                <td width="19%">Tiêu đề</td>
+                                <td width="10%">Mô tả</td>
+                                <td width="15%">Tên người dùng</td>
+                                <td width="10%">Nội dung</td>
+                                <td width="20%">Hình ảnh</td>
+                                <td width="5%">Trạng thái</td>
+                                <td width="5%">Ngày tạo</td>
+                                <td width="8%">Vị trí</td>
+                                <td width="3%">sửa</td>
+                                <td width="3%">xóa</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>phanvanngockd@gmail.com</td>
+                                <td>trungtc</td>
+                                <td>Phan Văn Ngọc</td>
+                                <td>0168 3535 845</td>
+                                <td>Nghĩa Đô, Cầu Giấy, Hà Nội</td>
+                                <td>Nam</td>
+                                <td>Có</td>
+                                <td>Admin</td>
+                                <td><i class="fa fa-pencil fa-lg"></i></td>
+                                <td><i class="fa fa-trash fa-lg"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>phanvanngockd@gmail.com</td>
+                                <td>trungtc</td>
+                                <td>Phan Văn Ngọc</td>
+                                <td>0168 3535 845</td>
+                                <td>Nghĩa Đô, Cầu Giấy, Hà Nội</td>
+                                <td>Nam</td>
+                                <td>Có</td>
+                                <td>Admin</td>
+                                <td><i class="fa fa-pencil fa-lg"></i></td>
+                                <td><i class="fa fa-trash fa-lg"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>phanvanngockd@gmail.com</td>
+                                <td>trungtc</td>
+                                <td>Phan Văn Ngọc</td>
+                                <td>0168 3535 845</td>
+                                <td>Nghĩa Đô, Cầu Giấy, Hà Nội</td>
+                                <td>Nam</td>
+                                <td>Có</td>
+                                <td>Author</td>
+                                <td><i class="fa fa-pencil fa-lg"></i></td>
+                                <td><i class="fa fa-trash fa-lg"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>phanvanngockd@gmail.com</td>
+                                <td>trungtc</td>
+                                <td>Phan Văn Ngọc</td>
+                                <td>0168 3535 845</td>
+                                <td>Nghĩa Đô, Cầu Giấy, Hà Nội</td>
+                                <td>Nam</td>
+                                <td>Có</td>
+                                <td>Advertiser</td>
+                                <td><i class="fa fa-pencil fa-lg"></i></td>
+                                <td><i class="fa fa-trash fa-lg"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>phanvanngockd@gmail.com</td>
+                                <td>trungtc</td>
+                                <td>Phan Văn Ngọc</td>
+                                <td>0168 3535 845</td>
+                                <td>Nghĩa Đô, Cầu Giấy, Hà Nội</td>
+                                <td>Nam</td>
+                                <td>Có</td>
+                                <td>Customer</td>
+                                <td><i class="fa fa-pencil fa-lg"></i></td>
+                                <td><i class="fa fa-trash fa-lg"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>6</td>
+                                <td>phanvanngockd@gmail.com</td>
+                                <td>trungtc</td>
+                                <td>Phan Văn Ngọc</td>
+                                <td>0168 3535 845</td>
+                                <td>Nghĩa Đô, Cầu Giấy, Hà Nội</td>
+                                <td>Nam</td>
+                                <td>Có</td>
+                                <td>Customer</td>
+                                <td><i class="fa fa-pencil fa-lg"></i></td>
+                                <td><i class="fa fa-trash fa-lg"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>7</td>
+                                <td>phanvanngockd@gmail.com</td>
+                                <td>trungtc</td>
+                                <td>Phan Văn Ngọc</td>
+                                <td>0168 3535 845</td>
+                                <td>Nghĩa Đô, Cầu Giấy, Hà Nội</td>
+                                <td>Nam</td>
+                                <td>Có</td>
+                                <td>Customer</td>
+                                <td><i class="fa fa-pencil fa-lg"></i></td>
+                                <td><i class="fa fa-trash fa-lg"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>8</td>
+                                <td>phanvanngockd@gmail.com</td>
+                                <td>trungtc</td>
+                                <td>Phan Văn Ngọc</td>
+                                <td>0168 3535 845</td>
+                                <td>Nghĩa Đô, Cầu Giấy, Hà Nội</td>
+                                <td>Nam</td>
+                                <td>Có</td>
+                                <td>Advertiser</td>
+                                <td><i class="fa fa-pencil fa-lg"></i></td>
+                                <td><i class="fa fa-trash fa-lg"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>9</td>
+                                <td>phanvanngockd@gmail.com</td>
+                                <td>trungtc</td>
+                                <td>Phan Văn Ngọc</td>
+                                <td>0168 3535 845</td>
+                                <td>Nghĩa Đô, Cầu Giấy, Hà Nội</td>
+                                <td>Nam</td>
+                                <td>Có</td>
+                                <td>Author</td>
+                                <td><i class="fa fa-pencil fa-lg"></i></td>
+                                <td><i class="fa fa-trash fa-lg"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>10</td>
+                                <td>phanvanngockd@gmail.com</td>
+                                <td>trungtc</td>
+                                <td>Phan Văn Ngọc</td>
+                                <td>0168 3535 845</td>
+                                <td>Nghĩa Đô, Cầu Giấy, Hà Nội</td>
+                                <td>Nam</td>
+                                <td>Có</td>
+                                <td>Author</td>
+                                <td><i class="fa fa-pencil fa-lg"></i></td>
+                                <td><i class="fa fa-trash fa-lg"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <table>
+                            <tr>
+                                <td width="80%"></td>
+                                <td><a href="#">First</a></td>
+                                <td><a href="#"><<</a></td>
+                                <td class="number active">1</td>
+                                <td class="number"><a href="#">2</a></td>
+                                <td class="number"><a href="#">3</a></td>
+                                <td class="number"><a href="#">4</a></td>
+                                <td><a href="#">>></a></td>
+                                <td><a href="#">Last</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div id="footer-info">
+                    <h4>trung tâm hỗ trợ và giảng dạy trực tuyến NLQ</h4>
+                    <p><span>Địa chỉ:</span> Tầng 5, Tòa nhà A4, Ngõ 120 Hoàng Quốc Việt - Cầu Giấy - Hà Nội | <span>Phone</span> (04) 3537 6697</p>
+                    <p><span>Trụ sở 2:</span> Số 25/178/71 Tây Sơn - Đống Đa - Hà Nội | <span>Hotline</span> 0968 511 155</p>
+                    <p>Bản quyền thuộc NLQ</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
