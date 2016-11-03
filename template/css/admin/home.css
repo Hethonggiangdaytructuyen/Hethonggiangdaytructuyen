@@ -1,0 +1,5 @@
+#main table tr td{height:150px;position:relative;}
+#main table tr td a{text-decoration:none;display:block;border:1px solid black;height:130px;width:70%;background-color:#438FBB;color:white;border-radius:20px;margin:auto;}
+#main table tr td a:hover{box-shadow:0 1px 10px rgba(0, 115, 183, 0.65);-moz-box-shadow:0 1px 10px rgba(0, 115, 183, 0.65);-webkit-box-shadow:0 1px 10px rgba(0, 115, 183, 0.65);-o-box-shadow:0 1px 10px rgba(0, 115, 183, 0.65);-ms-box-shadow:0 1px 10px rgba(0, 115, 183, 0.65);}
+#main table tr td a i{line-height:130px;margin:0 15px;text-align:center;width:80px;}
+#main table tr td a span{text-transform:uppercase;font-size:20px;position:absolute;top:44% }

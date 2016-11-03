@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*---------------- Reset CSS -------------------*/
+*{ margin:0px; padding:0px; }
+
+body{ font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#666; background:url(../images/admin/bg.gif) top left repeat; }
+
+/*---------------- Wrapper -------------------*/	
+#wrapper{ width:100%; height:auto; }	
+	
+/*---------------- Navbar -------------------*/
+.top{ width:100%; background-color:#438FBB; height:35px; line-height:35px; position:relative; }
+.top .navbar-top-links{ width:97%; margin:auto }
+.top .navbar-top-links a{ text-decoration:none; color: white; }
+.top .navbar-top-links .first-item{ font-weight:bold }
+#header{ height:auto; width: 100%; background:#FFF; }
+#navbar{ position:relative; height:auto; width: 100% }
+#navbar ul{ height:30px; line-height:30px; border-top:3px solid #FF0000; border-bottom:1px solid #CCC; width: 100% }	
+#navbar ul li{ float:left; list-style:none; width:auto; height:30px; line-height:30px; font-family:Verdana, Geneva, sans-serif; font-size:12px; font-weight:bold; text-transform:capitalize; padding:0px 12px; border-right:1px solid #CCC; }
+#navbar ul li:hover{ background:#FF0000; cursor:pointer; }
+#navbar ul li:hover a{ color:#FFF; }
+#navbar ul .active{ background:#FF0000; }
+#navbar ul li a{ text-decoration:none; color:#000; }
+#navbar ul .active a{ color:#FFF; }
+#user-info{ position:absolute; width:213px; height:117px; background:url(../../images/admin/user-info.png) top left no-repeat; top:0px; right:0; margin-right:21px }
+#user-info p{ width:193px; height:auto; padding:0 10px; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#FFF; text-align:center; }
+#user-info p span{ text-transform:capitalize; font-weight:bold; color:#FF0; }	
+#user-info p a{ font-weight:bold; text-decoration:none; color:#FF0; }
+
+/*---------------- Banner -------------------*/	
+#banner{ height:auto; padding:20px; border-bottom:1px solid #CCC; }
+#banner #logo{ text-align: center }
+
+/*---------------- Body -------------------*/		
+#body{ height:auto; padding:20px; background:#FFF; }
+#body h2{ height:35px; line-height:35px; font-family:Verdana, Geneva, sans-serif; font-size:15px; font-weight:bold; color:#FFF; text-transform:capitalize; background:#438FBB; padding:0px 10px; }
+#main{ height:auto; border:1px solid #CCC; padding:20px 10px; margin-top:10px; }
+#main p#add-prd{ width:100%; height:auto; text-align:right; font-family:Verdana, Geneva, sans-serif; font-size:15px; font-weight:bold; text-transform:uppercase; margin-bottom:20px; cursor: pointer }
+#main p#add-prd span{ background-color:#FF0000; border-radius:6px 6px 6px 6px; padding:5px 10px; color:#FFF; }
+.form{ height:0px; transition:height 1s; -moz-transition:height 1s; -webkit-transition:height 1s; -o-transition:height 1s; overflow:hidden; }
+.collapsed-box{ height:500px; overflow:hidden; }
+.minimize{ position:relative; }
+.minimize button{ position:absolute; right:0; cursor:pointer; }
+.table_form tr{ height:35px; }
+.table_form tr td:nth-child(2){ text-transform:uppercase; font-weight:bold }
+.table_form tr td:nth-child(4)>input{ border:none; color:red; display:none; }
+.table_form tr td:nth-child(4)>input:focus{ border:none; cursor:default; }
+.table_form tr td:nth-child(4)>input:hover{ cursor:default; }
+.table_form tr:last-child{ text-align:center }
+table{ width:100%; }
+.list{ margin-top:20px }
+.list td{ text-align:center; height:40px }
+.list td:nth-child(10), .list td:nth-child(11){ cursor:pointer; }
+.list td:nth-child(10):hover, .list td:nth-child(11):hover{ background-color:#438FBB; color:white; }
+.list .title{ text-align:center; text-transform:uppercase; font-weight:bold; color:white; }
+.list .title td{ background-color:#438FBB }
+.pagination{ margin-top:20px }
+.pagination tr{ text-align:center; font-weight:bold; color:black }
+.pagination tr .number{ border:1px solid black }
+.pagination tr a{ text-decoration:none; color:black; display:block }
+.pagination tr .number a:hover{ background-color:#FF0000 }
+.pagination tr .active{ background-color:#FF0000 }
+
+/*------------------ Footer -----------------*/
+#footer{ height:auto; border-top:8px solid #FF0000; margin-top:35px; }	
+#footer #footer-info{ height:auto; background:#438FBB; border-top:20px solid #00FF00; padding:20px 0px; text-align:center; }
+#footer #footer-info h4{ height:auto; font-family:Verdana, Geneva, sans-serif; font-size:15px; font-weight:bold; color:#FFF; text-transform:uppercase; }		
+#footer #footer-info p{ height:auto; font-family:Verdana, Geneva, sans-serif; font-size:12px; color:#FFF; padding:10px; }
+#footer #footer-info p span{ font-weight:bold; }

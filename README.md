@@ -1,2 +1,0 @@
-# Hethonggiangdaytructuyen
-Hethonggiangdaytructuyen
