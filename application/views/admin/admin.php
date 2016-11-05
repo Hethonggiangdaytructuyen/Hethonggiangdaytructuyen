@@ -53,12 +53,12 @@
                 <div id="navbar">
                     <ul>
                         <li class="active"><a href="./admin">home</a></li>
-                        <li><a href="./admin/user">thành viên</a></li>
-                        <li><a href="./admin/category">chuyên ngành</a></li>
-                        <li><a href="./admin/subject">môn học</a></li>
-                        <li><a href="./admin/article">bài đăng</a></li>
-                        <li><a href="./admin/adv">quảng cáo</a></li>
-                        <li><a target="_blank" href=".">xem website</a></li>
+                        <li><a href="./admin/user">Thành viên</a></li>
+                        <li><a href="./admin/category">Chuyên ngành</a></li>
+                        <li><a href="./admin/subject">Môn học</a></li>
+                        <li><a href="./admin/article">Bài đăng</a></li>
+                        <li><a href="./admin/adv">Quảng cáo</a></li>
+                        <li><a target="_blank" href=".">Xem website</a></li>
                     </ul>
                 </div>
             </div>
