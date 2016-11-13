@@ -67,6 +67,6 @@ class adv extends MY_Controller {
 	}
 	public function del($id){
 		$this->m_model->del(array('adv_id'=>$id), 'advertiser');
-		header('location:../adv');
+		header('location:../adv'); 
 	}
 }
